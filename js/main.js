@@ -3,6 +3,7 @@ window.num = 1;
 window.obs = "bootes"
 window.minnum = 1;
 window.maxnum = 26;
+window.marker_count = 1;
 var cols = ["#C5FFD4", "#C5FFFD", "#FFCBC4", "#E3FFC4", "#AF47FF", "#FF47F3", "#FF5447", "#5447FF", "#FFAF47", "#4797FF", "#58CC00", "#F3FF47", "#47F3FF", "#97FF47", "#934A01"];
 
 //INITIALISE SVG
@@ -56,7 +57,7 @@ $("#observatory").change(function(){
   window.num = 1;
   incrementValue(-1*window.num);
   $("circle").remove();
-  $("#download").text("").attr("href","#");
+  $("#download").hide().attr("href","#");
 
   if (this.value == "bootes") {
     window.maxnum = 26;
@@ -80,10 +81,16 @@ $('#paper').dblclick( function(evt) {
           +dec2hex(255*(window.num/window.maxnum)*(window.num/window.maxnum)*(window.num/window.maxnum));
    // console.log(col);
    c = sketchpad.circle(x-2,y-2,4).attr({ fill: col });
+   c.node.setAttribute('id', "created-"+marker_count);
    c.node.setAttribute('class', window.num);
    c.drag(move, start, up);
 
+   marker_count+=1;
    make_downloadable();
+});
+
+$("#undo").click( function() {
+  undo();
 });
 
 $("#download").hide();

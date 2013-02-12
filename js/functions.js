@@ -8,8 +8,13 @@ function dec2hex(i) {
 
 function updateImage() {
   image_url = "allsky/"+window.obs+"/"+window.num+".jpg";
-  $("circle").attr({opacity: 0.25});
+  
+  $("circle").attr({opacity: 0.5});
   $("circle."+window.num).attr({opacity: 1.0});
+
+  $("path").attr({opacity: 0.5});
+  $("path."+window.num).attr({opacity: 1.0});
+
   var c = skymap.image(image_url, 0, 0, "100%", "100%");
 }
 
@@ -43,8 +48,10 @@ function loadSlider() {
 
         window.num = ui.value;
         image_url = "allsky/"+window.obs+"/"+window.num+".jpg";
-        $("circle").attr({opacity: 0.25});
+        $("circle").attr({opacity: 0.5});
         $("circle."+window.num).attr({opacity: 1.0});
+        $("path").attr({opacity: 0.5});
+        $("path."+window.num).attr({opacity: 1.0});
         var c = skymap.image(image_url, 0, 0, "100%", "100%");
     }
 });
@@ -56,6 +63,15 @@ function circles2JSON() {
 		output+=index + "," + $(this).attr('cx') + "," + $(this).attr('cy') + "," + $(this).attr('class') + "\n";
 	});
 	return output
+}
+
+function paths2JSON() {
+  output = "id,x1,y1,x2,y2,day\n"
+  $("path").each(function( index ) {
+    coords = $(this).attr('d').split("M")[1].replace("L",",").split(",")
+    output+=index + "," + coords[0] + "," + coords[1] + "," + coords[2] + "," + coords[2] + "," + $(this).attr('class') + "\n";
+  });
+  return output
 }
 
 function make_downloadable(){
@@ -72,12 +88,25 @@ function make_downloadable(){
  $("#download_svg").attr("href", "data:image/svg+xml;base64,\n"+b64);
  $("#download_svg").attr("target", "_blank");
 
- csv_data = circles2JSON();
+ if ($("circle").length>0) {
+  csv_data = circles2JSON();
+} else {
+  csv_data = paths2JSON();
+}
+
  $("#download_csv").text("CSV");
  $("#download_csv").attr("href", "data:application/download,\n"+encodeURIComponent(csv_data));
  $("#download_csv").attr("target", "_blank");
 
- $("circle").attr({opacity: 0.25});
+ $("circle").attr({opacity: 0.5});
  $("circle."+window.num).attr({opacity: 1.0});
+}
+
+function undo(){
+  console.log("Click");
+  if (marker_count>0) {
+    $("#created-"+(marker_count-1)).remove();
+    marker_count = marker_count-1
+  }
 }
 

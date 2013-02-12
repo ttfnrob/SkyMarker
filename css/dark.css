@@ -138,7 +138,7 @@ div#header p {
 div#info {
     position: absolute;
     top: 3px;
-    right: 0px;
+    right: 20px;
     background-color: #3072CF;
     height: 16px;
     width: 16px;
@@ -159,10 +159,34 @@ div#info:hover {
     background-color: #3E9AFA;
 }
 
+div#undo {
+    position: absolute;
+    top: 3px;
+    right: 0px;
+    background-color: #dddddd;
+    height: 16px;
+    width: 16px;
+    line-height: 16px;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: 'Times New Roman';
+    cursor: pointer;
+    color: #000000;
+    text-align: center;
+    padding: 0 0 0 1px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+div#undo:hover {
+    background-color: #ffffff;
+}
+
 div#right-controls {
     position: absolute;
     top: 3px;
-    right: 30px;
+    right: 50px;
     height: 16px;
 }
 
@@ -170,7 +194,7 @@ div#left-controls {
     position: absolute;
     top: 3px;
     height: 16px;
-    right: 335px;
+    right: 355px;
 }
 
 div#right-controls span, div#left-controls span {
@@ -214,7 +238,7 @@ div#left-controls span {
 
 div#header #slider {
     position: absolute;
-    right: 80px;
+    right: 100px;
     top: 5px;
     text-align: left;
     padding: 0;

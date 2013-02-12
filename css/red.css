@@ -6,16 +6,6 @@ div#right-controls span:hover, div#left-controls span:hover {
     background-color: #D33120;
 }
 
-div#header #slider {
-    position: absolute;
-    right: 80px;
-    top: 5px;
-    text-align: left;
-    padding: 0;
-    width: 240px;
-    margin: auto 0;
-}
-
 div#header #slider .ui-slider-range {
     background: #777777;
 }
