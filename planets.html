@@ -7,7 +7,7 @@
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>GLORIA All Sky Drawing: Planets</title>
+        <title data-i18n="html_title_planets">GLORIA All Sky Drawing: Planets</title>
         <meta name="description" content="Drawing on all-sky images to track planetary motion">
         <meta name="viewport" content="width=device-width">
 
@@ -22,22 +22,21 @@
         <script type="text/javascript" src="js/vendor/json2.min.js"></script>
         <script type="text/javascript" src="js/vendor/raphael.js"></script>
         <script type="text/javascript" src="js/vendor/base64.js"></script>
-        <!-- <script type="text/javascript" src="js/vendor/jquery.i18n.properties-min-1.0.9.js"></script>
-        <script type="text/javascript" src="js/vendor/i18n.js"></script> -->
+
+        <script type="text/javascript" src="locales/en.js"></script>
+        <script type="text/javascript" src="js/i18n.js"></script>
 
         <script type="text/javascript">
             $(document).ready(function(){
-            if (getURLParameter("css")==="light"){
+                if (getURLParameter("css")==="light"){
                     if (document.createStyleSheet){
                         document.createStyleSheet('css/light.css');
-                    }
-                    else {
+                    } else {
                         $("head").append($("<link rel='stylesheet' href='css/light.css' type='text/css' media='screen' />"));
                     }
                 }
             });
         </script>
-
         <link rel="stylesheet" type="text/css" href="css/red.css">
 
     </head>
@@ -49,7 +48,7 @@
         <div id="wrapper">
             
             <div id="header">
-                <p>Tracking Objects on the Night Sky</p>
+                <p data-i18n="content_title">Tracking Objects on the Night Sky</p>
 
                  <div id="left-controls">
                     <span id="back5"><<</span>
@@ -69,23 +68,19 @@
             <div id="skymap"></div>
             <div id="paper"></div>
             <div id="about">
-                <h3>About this tool.</h3>
-
-                <p>Use the slider to move between the images.</p>
-
-                <p>Double-click to mark an object, click-and-drag to move an existing mark.</p>
-
-                <p>Stars and planets move in different ways across the sky.</p>
-
+                <h3 data-i18n="about_planets_title">About this tool.</h3>
+                <p data-i18n="about_planets_p1">Use the slider to move between the images.</p>
+                <p data-i18n="about_planets_p2">Double-click to mark an object, click-and-drag to move an existing mark.</p>
+                <p data-i18n="about_planets_p3">Stars and planets move in different ways across the sky.</p>
             </div>
 
             <div id="footer">
-                <p class="left"><a href="http://gloria-project.eu/en/" target="_blank">GLORIA</a> All-Sky Camera Component <a href="#" id="download"></a></p>
+                <p class="left"><a href="http://gloria-project.eu/en/" target="_blank">GLORIA</a> <span data-i18n="component_name">All-Sky Camera Component</span> <a href="#" id="download"></a></p>
 
                 <p class="right">
-                    Image source <select id="observatory">
-                        <option value="bootes" selected="selected">BOOTES/CASANDRA-1 (Mars)</option>
-                        <option value="bayfordbury">Bayfordbury All-Sky Camera (Jupiter)</option>
+                    <span data-i18n="image_source">Image source</span>  <select id="observatory">
+                        <option value="bootes" data-i18n="bootes" selected="selected">BOOTES/CASANDRA-1 (Mars)</option>
+                        <option value="bayfordbury" data-i18n="bayfordbury">Bayfordbury All-Sky Camera (Jupiter)</option>
                     </select>
                 </p>
             </div>
@@ -99,6 +94,7 @@
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/i18n.js"></script>
         <script>
             // var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             // (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
