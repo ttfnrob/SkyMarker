@@ -185,5 +185,6 @@ $("#paper").mouseup(function(e){
   marker_count+=1;
 }); 
 
+$("#download").hide();
 loadSlider();
 preload();

@@ -2,23 +2,24 @@
 window.t = {};
 
 //Titles
-window.t['html_title_planets'] 		= "ES: GLORIA All Sky Drawing: Planets";
-window.t['html_title_meteors'] 		= "ES: GLORIA All Sky Drawing: Meteors";
-window.t['content_title'] 			= "ES: Tracking Objects on the Night Sky";
+window.t['html_title_planets'] 		= "GLORIA All Sky: Planetas";
+window.t['html_title_meteors'] 		= "GLORIA All Sky: Meteoros";
+window.t['content_title'] 			= "Seguimiento de objetos en cielo nocturno";
 
 //Information Window (Planets)
-window.t['about_planets_title'] 	= "About this tool.";
-window.t['about_planets_p1'] 		= "Use the slider to move between the images.";
-window.t['about_planets_p2'] 		= "Double-click to mark an object, click-and-drag to move an existing mark.";
-window.t['about_planets_p3'] 		= "Stars and planets move in different ways across the sky.";
+window.t['about_planets_title'] 	= "Acerca de esta herramienta.";
+window.t['about_planets_p1'] 		= "Usa la barra de desplazamiento para moverte entre las imágenes";
+window.t['about_planets_p2'] 		= "Haz doble click para señalar un objeto, pincha y arrastra para mover un objeto previamente señalado";
+window.t['about_planets_p3'] 		= "Estrellas y planetas se mueven de forma diferente a lo largo del cielo";
 //Information Window (Meteors
-window.t['about_meteors_title'] 	= "About this tool.";
-window.t['about_meteors_p1'] 		= "Use the slider to move between the images.";
-window.t['about_meteors_p2'] 		= "Click and drag to mark streaks and lines on the image.";
-window.t['about_meteors_p3'] 		= "Watch the lines build up to show the sourc eof the meteor shower.";
+window.t['about_meteors_title'] 	= "Acerca de esta herramienta.";
+window.t['about_meteors_p1'] 		= "Usa la barra de desplazamiento para moverte entre las imágenes.";
+window.t['about_meteors_p2'] 		= "Pulsa y arrastra para señalar rayas que aparecen en la imagen.";
+window.t['about_meteors_p3'] 		= "Las líneas dibujadas muestran el origen de la lluvia de meteoritos.";
 
 //Footer
-window.t['component_name'] 			= "All-Sky Camera Component";
-window.t['image_source'] 			= "Image source";
-window.t['bootes'] 					= "BOOTES/CASANDRA-1 (Mars)";
-window.t['bayfordbury'] 			= "Bayfordbury All-Sky Camera (Jupiter)";
+window.t['component_name'] 			= "Componente Cámara All-Sky";
+window.t['download']				= "Descargar";
+window.t['image_source'] 			= "Fuente de la imagen";
+window.t['bootes'] 					= "BOOTES/CASANDRA-1 (Marte)";
+window.t['bayfordbury'] 			= "Cámara All-Sky situada en Bayfordbury (Júpiter)";

@@ -19,6 +19,7 @@ window.t['about_meteors_p3'] 		= "Watch the lines build up to show the sourc eof
 
 //Footer
 window.t['component_name'] 			= "All-Sky Camera Component";
+window.t['download']				= "Download";
 window.t['image_source'] 			= "Image source";
 window.t['bootes'] 					= "BOOTES/CASANDRA-1 (Mars)";
 window.t['bayfordbury'] 			= "Bayfordbury All-Sky Camera (Jupiter)";
